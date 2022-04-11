@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container-fluid">
+      <strong class="navbar-brand">Booking</strong>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"></li>
+        </ul>
+        <div class="d-flex">
+          <button (click)="onLogout()" class="btn btn-danger">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid mt-5">
+    <div class="card">
+      <div class="card-header d-flex justify-content-end">
+        <a routerLink="/listing" class="btn btn-primary">New Booking</a>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Listing ID</th>
+              <th>Booking ID</th>
+              <th>Booking Date</th>
+              <th>Booking Start</th>
+              <th>Booking End</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of response">
+              <td>{{ item.listing_id }}</td>
+              <td>{{ item.booking_id }}</td>
+              <td>{{ item.booking_date | date: "yyyy-MM-dd" }}</td>
+              <td>{{ item.booking_start | date: "yyyy-MM-dd" }}</td>
+              <td>{{ item.booking_end | date: "yyyy-MM-dd" }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

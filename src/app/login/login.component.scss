@@ -1,0 +1,13 @@
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  .card{
+    min-width: 400px;
+    max-width: 90%;
+    .form-group{
+      margin: 20px 0px;
+    }
+  }
+}

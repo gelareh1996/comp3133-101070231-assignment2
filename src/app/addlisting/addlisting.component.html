@@ -1,0 +1,110 @@
+<div class="container-fluid">
+  <div class="content">
+    <form (submit)="onSubmit($event)" method="post">
+      <div class="card">
+        <div class="card-header">Add Listing</div>
+        <div class="card-body">
+          <div class="row form-group">
+            <div class="col-6">
+              <label for="">Listing ID</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Listing ID..."
+                (change)="changeTextfield('listing_id', $event)"
+              />
+            </div>
+            <div class="col-6">
+              <label for="">Listing Title</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Listing Title..."
+                (change)="changeTextfield('listing_title', $event)"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-6">
+              <label for="">Description</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Description..."
+                (change)="changeTextfield('description', $event)"
+              />
+            </div>
+            <div class="col-6">
+              <label for="">Street</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Street..."
+                (change)="changeTextfield('street', $event)"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-6">
+              <label for="">City</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter City..."
+                (change)="changeTextfield('city', $event)"
+              />
+            </div>
+            <div class="col-6">
+              <label for="">Postal Code</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Postal Code..."
+                (change)="changeTextfield('postal_code', $event)"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-6">
+              <label for="">Price</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Enter Price..."
+                (change)="changeTextfield('price', $event)"
+              />
+            </div>
+            <div class="col-6">
+              <label for="">Email</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Email..."
+                (change)="changeTextfield('email', $event)"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-6">
+              <label for="">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Username..."
+                (change)="changeTextfield('username', $event)"
+              />
+            </div>
+          </div>
+          <div *ngIf="isError" class="form-group">
+            <div class="alert alert-danger">
+              {{ errorMessage }}
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
